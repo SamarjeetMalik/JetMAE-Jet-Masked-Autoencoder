@@ -1,0 +1,96 @@
+{
+  "headline": {
+    "jetmae_auc": 0.8769074254,
+    "jetmae_acc": 0.80021,
+    "baseline_auc": 0.8730635454,
+    "baseline_acc": 0.79532,
+    "bdt_auc": 0.87192277735,
+    "mult_auc": 0.84094068095,
+    "symbolic_auc": 0.84092753795,
+    "recovery_raw_pct": 95.89695714646413,
+    "recovery_excess_pct": 90.45391917874377,
+    "pretrain_gain_pct": 0.3843880000000022
+  },
+  "rejection_metric": {
+    "jetmae": {
+      "0.3": 72.1674284339668,
+      "0.5": 25.464248466049934
+    },
+    "baseline": {
+      "0.3": 71.15696782370861,
+      "0.5": 24.200738759393708
+    },
+    "bdt": {
+      "0.3": 69.44444444444444,
+      "0.5": 23.75861249703017
+    },
+    "mult": {
+      "0.3": 56.71302337875315,
+      "0.5": 18.38218515113042
+    }
+  },
+  "multiseed": {
+    "mae_mean": 0.8660310331666666,
+    "mae_std": 0.0020684181525848218,
+    "base_mean": 0.8525438548166667,
+    "base_std": 0.000735437262656662,
+    "gain_pct": 1.3487178349999907,
+    "gain_std_pct": 0.27886014962242994,
+    "n_seeds": 3,
+    "per_seed_mae": [
+      0.86645681385,
+      0.8637828573999999,
+      0.86785342825
+    ],
+    "per_seed_base": [
+      0.8522002230000001,
+      0.8533882076,
+      0.8520431338500001
+    ]
+  },
+  "mask_token_ablation": {
+    "shared": 0.8728653149999999,
+    "typed": 0.87681445025,
+    "delta": 0.00394913525000018
+  },
+  "mask_ratio_ablation": {
+    "0.15": 0.8739356837,
+    "0.30": 0.87235644305,
+    "0.45": 0.8708079403
+  },
+  "restframe": {
+    "rest_auc": 0.8529231817709082,
+    "lab_auc": 0.8601214469431513,
+    "delta": -0.00719826517224309,
+    "feature_importances": {
+      "mass_rf": 0.09669242191652362,
+      "width_rf": 0.029335708510168503,
+      "pTD_rf": 0.4982344001323779,
+      "mult": 0.37573746944093
+    }
+  },
+  "shap_top5": [
+    "mult",
+    "C1_b02",
+    "C1_b10",
+    "LHA",
+    "width"
+  ],
+  "pysr_pretrained_eq": "square((n_mult * -0.22871128) + 0.66309404)",
+  "pysr_baseline_eq": "square((n_mult * -0.23520032) + 0.6500705)",
+  "config": {
+    "d_model": 128,
+    "n_heads": 8,
+    "n_layers": 6,
+    "dropout": 0.1,
+    "mask_ratio": 0.3,
+    "batch_size": 2048,
+    "pretrain_lr": 0.0003,
+    "pretrain_wd": 0.0001,
+    "warmup_epochs": 8,
+    "finetune_lr": 5e-05,
+    "freeze_encoder_epochs": 5,
+    "label_smoothing": 0.05,
+    "mask_token_mode": "typed"
+  }
+}
