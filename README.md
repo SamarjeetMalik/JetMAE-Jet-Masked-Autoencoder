@@ -214,7 +214,7 @@ If you use this work, please cite:
   title        = {{JetMAE}: Masked Autoencoder Pretraining for Quark/Gluon Jet Tagging
                   with Symbolic Interpretability},
   author       = {Malik, Samarjeet},
-  year         = {2025},
+  year         = {2026},
   howpublished = {\url{https://github.com/SamarjeetMalik/JetMAE-Jet-Masked-Autoencoder}},
   note         = {PAI26 submission}
 }
